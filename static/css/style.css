@@ -1,0 +1,257 @@
+/* Set body background color to grey */
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flex container for the page */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Banner */
+.nav-banner {
+    background-color: white;
+    padding: 40px 0;
+    box-shadow: 0px 4px 2px -2px gray;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation Links */
+.nav-container {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.nav-list a:hover {
+    color: gray;
+}
+
+/* Hero Image Styling */
+.hero {
+    width: 100%;
+    position: relative; /* Make it a positioned element for the overlay */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Proper centering with flexbox */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-form p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-row input, .form-row textarea {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-row textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #f60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55500;
+}
+
+/* Contact Info Section Styling */
+.contact-info-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Aligns icon and text vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Ensures content aligns properly */
+}
+
+.info-item img {
+    width: 750px; /* Adjust width of icons */
+    height: auto;
+    margin-bottom: -25px; /* Decreased margin to reduce space between icon and text */
+}
+
+.info-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-item a {
+    color: #f60;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333; /* Ensure text color is visible */
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0; /* Slight background color change on hover */
+}
+
+.faq-question::after {
+    content: "\25BC"; /* Down arrow */
+    font-size: 16px;
+    color: #333; /* Ensure arrow color is visible */
+}
+
+.faq-question.active::after {
+    content: "\25B2"; /* Up arrow */
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}

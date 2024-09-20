@@ -3,11 +3,110 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Title</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
-    <p>My Website</p>
-    <script src="static/js/script.js"></script> 
+    <div class="page-container">
+      <!-- Flexbox Navigation Banner -->
+      <div class="nav-banner">
+        <nav class="nav-container">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Hero Image Section -->
+      <div class="hero">
+        <img src="{{ url_for('static', filename='assets/Hero.jpg') }}" alt="Hero Image" class="hero-image">
+        <!-- Contact Form Overlay -->
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p>Feel free to reach out with any questions or comments below.</p>
+          <form>
+            <div class="form-row">
+              <input type="text" name="first_name" placeholder="First Name*" required>
+              <input type="text" name="last_name" placeholder="Last Name*" required>
+            </div>
+            <div class="form-row">
+              <input type="text" name="phone" placeholder="Phone" required>
+              <input type="email" name="email" placeholder="Email Address*" required>
+            </div>
+            <div class="form-row">
+              <textarea name="message" placeholder="Enter Your Message*" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info Section (Email, Phone, Location) -->
+      <div class="contact-info-section">
+        <div class="contact-info">
+          <!-- Email Section -->
+          <div class="info-item">
+            <img src="{{ url_for('static', filename='assets/Email.png') }}" alt="Email Icon">
+            <h3>Email</h3>
+            <p><a href="mailto:contact@mywebsite.com">contact@mywebsite.com</a></p>
+            <p>Feel free to email us with any inquiries or concerns.</p>
+          </div>
+
+          <!-- Phone Section -->
+          <div class="info-item">
+            <img src="{{ url_for('static', filename='assets/Phone.png') }}" alt="Phone Icon">
+            <h3>Phone</h3>
+            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Give us a call for more information about our services.</p>
+          </div>
+
+          <!-- Location Section -->
+          <div class="info-item">
+            <img src="{{ url_for('static', filename='assets/Location.png') }}" alt="Location Icon">
+            <h3>Location</h3>
+            <p>1234 Main St, Anytown, USA</p>
+            <p>Visit us at our office for face-to-face consultations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question">Can I choose my meals?</button>
+          <div class="faq-answer">
+            <p>Yes, you can choose from a variety of meal options tailored to your dietary preferences.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">When will I receive my order?</button>
+          <div class="faq-answer">
+            <p>Your order will arrive within 2-3 business days from the time of placing your order.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I skip a delivery?</button>
+          <div class="faq-answer">
+            <p>Yes, you can skip a delivery by updating your preferences in the account settings at least 24 hours before the scheduled delivery date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I add extras to my delivery?</button>
+          <div class="faq-answer">
+            <p>You can add snacks, beverages, or other extras to your delivery at checkout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

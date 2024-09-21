@@ -1,6 +1,6 @@
-/* Set body background color to grey */
+/* Set body background color to white */
 body {
-    background-color: gray;
+    background-color: white;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -254,4 +254,74 @@ button:hover {
 
 .faq-item.active .faq-answer {
     display: block;
+}
+
+/* Blog Header Full-Width Styling */
+.blog-header {
+    background-color: #f0f0f0; /* Light gray background */
+    width: 100vw; /* Full width */
+    padding: 120px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.blog-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Blog Container Styling */
+.blog-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Blog Post Styling */
+.blog-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Blog Post Image */
+.blog-image {
+    width: 40%;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add some margin below the image */
+}
+
+.blog-text {
+    text-align: left;
+    width: 55%;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #27AE60; /* Green color for the date */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blog-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blog-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Divider Line */
+.divider {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: 0;
+    border-top: 2px solid #ddd;
 }

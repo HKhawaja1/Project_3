@@ -257,7 +257,8 @@ button:hover {
 }
 
 /* Blog Header Full-Width Styling */
-.blog-header {
+.blog-header,
+.how-it-works-header {
     background-color: #f0f0f0; /* Light gray background */
     width: 100vw; /* Full width */
     padding: 120px 0;
@@ -265,14 +266,22 @@ button:hover {
     text-align: center;
 }
 
-.blog-header h1 {
+.blog-header h1,
+.how-it-works-header h1 {
     font-size: 48px;
     font-weight: bold;
     margin: 0;
 }
 
+.how-it-works-header p {
+    font-size: 20px;
+    color: #666;
+    margin: 15px 0 0 0;
+}
+
 /* Blog Container Styling */
-.blog-container {
+.blog-container,
+.how-it-works-container {
     max-width: 1200px;
     margin: 50px auto;
     padding: 0 20px;
@@ -280,7 +289,8 @@ button:hover {
 }
 
 /* Blog Post Styling */
-.blog-post {
+.blog-post,
+.how-it-works-post {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -294,25 +304,43 @@ button:hover {
     margin-bottom: 20px; /* Add some margin below the image */
 }
 
-.blog-text {
+/* Reverse Layout */
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* Circular Image Styling for About Page */
+.how-it-works-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Text Styling for Blog and About */
+.blog-text,
+.how-it-works-text {
     text-align: left;
     width: 55%;
 }
 
-.blog-date {
+.blog-date,
+.how-it-works-text h2 {
     font-size: 14px;
-    color: #27AE60; /* Green color for the date */
+
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.blog-text h2 {
+.blog-text h2,
+.how-it-works-text h2 {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.blog-text p {
+.blog-text p,
+.how-it-works-text p {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
@@ -324,4 +352,35 @@ button:hover {
     margin-bottom: 50px;
     border: 0;
     border-top: 2px solid #ddd;
+}
+
+/* Buttons Styling */
+button {
+    background-color: #f60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55500;
+}
+
+/* Button Variations */
+.view-menu-button {
+    background-color: #f60;
+    color: white;
+}
+
+.get-started-button {
+    background-color: #27AE60;
+    color: white;
+}
+
+.get-started-button:hover {
+    background-color: #1e8a50;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Title</title>
+    <title>How It Works</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
@@ -20,9 +20,93 @@
       </nav>
     </div>
 
-    <!-- Main Content -->
-    <div>
-      <p>Content of the page goes here...</p>
+    <!-- How It Works Header with Light Gray Background -->
+    <div class="how-it-works-header">
+      <h1>How It Works</h1>
+      <p>Eating optimally has never been this convenient, simple, and tasteful.</p>
+    </div>
+
+    <!-- How It Works Content Section -->
+    <div class="how-it-works-container">
+      <!-- Section 1 (Normal layout: Image on the left) -->
+      <div class="how-it-works-post">
+        <img src="{{ url_for('static', filename='assets/About_1.jpg') }}" alt="How It Works Image 1" class="how-it-works-image">
+        <div class="how-it-works-text">
+          <h2>Choose your meals</h2>
+          <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
+          <button class="view-menu-button">VIEW OUR MENU</button>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <!-- Section 2 (Reversed layout: Image on the right) -->
+      <div class="how-it-works-post reverse-layout">
+        <div class="how-it-works-text">
+          <h2>We cook & deliver</h2>
+          <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+        </div>
+        <img src="{{ url_for('static', filename='assets/About_2.jpg') }}" alt="How It Works Image 2" class="how-it-works-image">
+      </div>
+
+      <hr class="divider">
+
+      <!-- Section 3 (Normal layout: Image on the left) -->
+      <div class="how-it-works-post">
+        <img src="{{ url_for('static', filename='assets/About_3.jpg') }}" alt="How It Works Image 3" class="how-it-works-image">
+        <div class="how-it-works-text">
+          <h2>Enjoy fresh & tasty meals</h2>
+          <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <!-- Section 4 (Reversed layout: Image on the right) -->
+      <div class="how-it-works-post reverse-layout">
+        <div class="how-it-works-text">
+          <h2>Get started with us today!</h2>
+          <p>Suspendisse potenti. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+          <button class="get-started-button">GET STARTED</button>
+        </div>
+        <img src="{{ url_for('static', filename='assets/About_4.jpg') }}" alt="How It Works Image 4" class="how-it-works-image">
+      </div>
+
+      <hr class="divider">
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question">Can I choose my meals?</button>
+          <div class="faq-answer">
+            <p>Yes, you can choose from a variety of meal options tailored to your dietary preferences.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">When will I receive my order?</button>
+          <div class="faq-answer">
+            <p>Your order will arrive within 2-3 business days from the time of placing your order.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I skip a delivery?</button>
+          <div class="faq-answer">
+            <p>Yes, you can skip a delivery by updating your preferences in the account settings at least 24 hours before the scheduled delivery date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I add extras to my delivery?</button>
+          <div class="faq-answer">
+            <p>You can add snacks, beverages, or other extras to your delivery at checkout.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

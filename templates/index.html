@@ -20,9 +20,105 @@
       </nav>
     </div>
 
-    <!-- Main Content -->
-    <div>
-      <p>Content of the page goes here...</p>
+    <!-- Hero Image Section -->
+    <div class="hero home-hero">
+      <img src="{{ url_for('static', filename='assets/Home_1.jpg') }}" alt="Hero Image" class="hero-image">
+      <div class="hero-text">
+        <h1>Nutritious Meals Delivered With Ease</h1>
+        <p>Enjoy wholesome, flavorful dishes every day, without any hassle in the kitchen.</p>
+        <button class="hero-button">HOW IT WORKS</button>
+      </div>
+    </div>
+
+    <!-- New Section below Hero -->
+    <div class="home-info-section">
+      <div class="home-info">
+        <!-- Choose Your Meals -->
+        <div class="info-item">
+          <img src="{{ url_for('static', filename='assets/Home_2.jpg') }}" alt="Icon 1" class="info-image">
+          <h3>Select your preferred dishes</h3>
+          <p>Explore a variety of meals tailored to your taste. Convenient and easy to order.</p>
+        </div>
+        
+        <!-- Customize to your needs -->
+        <div class="info-item">
+          <img src="{{ url_for('static', filename='assets/Home_3.jpg') }}" alt="Icon 2" class="info-image">
+          <h3>Customize to your needs</h3>
+          <p>Adjust ingredients and portion sizes to match your lifestyle and preferences.</p>
+        </div>
+        
+        <!-- Affordable, fresh meals -->
+        <div class="info-item">
+          <img src="{{ url_for('static', filename='assets/Home_4.jpg') }}" alt="Icon 3" class="info-image">
+          <h3>Affordable, fresh meals</h3>
+          <p>Enjoy delicious meals at an affordable price without compromising on freshness.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personalized Meal Plans For Every Lifestyle Section -->
+    <div class="meal-plans-section">
+      <div class="meal-plans-container">
+        <!-- Image Column -->
+        <div class="meal-plans-image">
+          <img src="{{ url_for('static', filename='assets/Home_5.jpg') }}" alt="Meal Image" class="circular-image">
+        </div>
+        <!-- Text Column -->
+        <div class="meal-plans-text">
+          <h3>Personalized Meal Plans For Every Lifestyle</h3>
+          <p>Discover the joy of eating well without the stress. Our meals are designed to fit your taste, health goals, and daily schedule, giving you more time for what matters.</p>
+          <ul class="meal-plans-list">
+            <li>📋 Choose your meals</li>
+            <li>🚀 We cook & deliver</li>
+            <li>🔥 Heat & enjoy</li>
+            <li>❤️ Repeat with ease</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Section for Meal Plan Cards -->
+    <div class="meal-plan-cards-section">
+      <h2 class="meal-plan-title">Tailored Meal Plans for Every Taste</h2>
+      <p class="meal-plan-subtitle">From fresh, clean meals to indulgent classics, our meal plans are curated to suit your preferences and make dining enjoyable and convenient.</p>
+      
+      <div class="meal-plan-cards">
+        <!-- Card 1 -->
+        <div class="meal-plan-card">
+          <img src="{{ url_for('static', filename='assets/Home_6.jpg') }}" alt="Meal Plan 1" class="meal-plan-image">
+          <span class="meal-count">12 meals</span>
+          <div class="meal-plan-details">
+            <h3>$91.08 USD</h3>
+            <p>Healthy Gourmet Dinner</p>
+            <p>Experience a balance of flavor and nutrition with our expertly crafted meals.</p>
+            <button class="meal-plan-button">CHOOSE PLAN</button>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="meal-plan-card">
+          <img src="{{ url_for('static', filename='assets/Home_7.jpg') }}" alt="Meal Plan 2" class="meal-plan-image">
+          <span class="meal-count">7 meals</span>
+          <div class="meal-plan-details">
+            <h3>$72.68 USD</h3>
+            <p>Everyday Wellness</p>
+            <p>Perfect for maintaining a balanced diet while enjoying wholesome flavors.</p>
+            <button class="meal-plan-button">CHOOSE PLAN</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="meal-plan-card">
+          <img src="{{ url_for('static', filename='assets/Home_8.jpg') }}" alt="Meal Plan 3" class="meal-plan-image">
+          <span class="meal-count">4 meals</span>
+          <div class="meal-plan-details">
+            <h3>$45.08 USD</h3>
+            <p>Comfort Classics</p>
+            <p>Savor homestyle favorites that bring comfort and joy to your meals.</p>
+            <button class="meal-plan-button">CHOOSE PLAN</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

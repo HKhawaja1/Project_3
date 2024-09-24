@@ -4,8 +4,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Flex container for the page */
@@ -21,12 +19,11 @@ body {
 /* Navigation Banner */
 .nav-banner {
     background-color: white;
-    padding: 40px 0;
-    box-shadow: 0px 4px 2px -2px gray;
-    width: 100%;
+    padding: 55px 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 4px 2px -2px gray;
 }
 
 /* Navigation Links */
@@ -62,7 +59,9 @@ body {
 /* Hero Image Styling */
 .hero {
     width: 100%;
-    position: relative; /* Make it a positioned element for the overlay */
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .hero-image {
@@ -75,12 +74,55 @@ body {
     display: block;
 }
 
+/* Specific class for index page hero image to make it shorter */
+.index-hero .hero-image {
+    max-height: 600px;
+}
+
+/* Hero Text Styling */
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: #f60;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e55500;
+}
+
 /* Contact Form Styling */
 .contact-form {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Proper centering with flexbox */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -106,7 +148,8 @@ body {
     margin-bottom: 20px;
 }
 
-.form-row input, .form-row textarea {
+.form-row input,
+.form-row textarea {
     width: 48%;
     padding: 15px;
     border: 1px solid #ddd;
@@ -120,21 +163,6 @@ body {
     width: 100%;
     height: 100px;
     resize: none;
-}
-
-button {
-    background-color: #f60;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #e55500;
 }
 
 /* Contact Info Section Styling */
@@ -159,15 +187,16 @@ button:hover {
     margin: 20px;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Aligns icon and text vertically */
-    align-items: center; /* Centers content horizontally */
-    justify-content: flex-start; /* Ensures content aligns properly */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .info-item img {
-    width: 750px; /* Adjust width of icons */
-    height: auto;
-    margin-bottom: -25px; /* Decreased margin to reduce space between icon and text */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .info-item h3 {
@@ -218,7 +247,7 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    color: #333; /* Ensure text color is visible */
+    color: #333;
     outline: none;
     position: relative;
     display: flex;
@@ -227,17 +256,17 @@ button:hover {
 }
 
 .faq-question:hover {
-    background-color: #f0f0f0; /* Slight background color change on hover */
+    background-color: #f0f0f0;
 }
 
 .faq-question::after {
-    content: "\25BC"; /* Down arrow */
+    content: "\25BC";
     font-size: 16px;
-    color: #333; /* Ensure arrow color is visible */
+    color: #333;
 }
 
 .faq-question.active::after {
-    content: "\25B2"; /* Up arrow */
+    content: "\25B2";
 }
 
 .faq-answer {
@@ -259,8 +288,8 @@ button:hover {
 /* Blog Header Full-Width Styling */
 .blog-header,
 .how-it-works-header {
-    background-color: #f0f0f0; /* Light gray background */
-    width: 100vw; /* Full width */
+    background-color: #f0f0f0;
+    width: 100vw;
     padding: 120px 0;
     margin: 0;
     text-align: center;
@@ -297,14 +326,12 @@ button:hover {
     gap: 30px;
 }
 
-/* Blog Post Image */
 .blog-image {
     width: 40%;
     border-radius: 10px;
-    margin-bottom: 20px; /* Add some margin below the image */
+    margin-bottom: 20px;
 }
 
-/* Reverse Layout */
 .reverse-layout {
     flex-direction: row-reverse;
 }
@@ -327,7 +354,6 @@ button:hover {
 .blog-date,
 .how-it-works-text h2 {
     font-size: 14px;
-
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -370,7 +396,6 @@ button:hover {
     background-color: #e55500;
 }
 
-/* Button Variations */
 .view-menu-button {
     background-color: #f60;
     color: white;
@@ -383,4 +408,216 @@ button:hover {
 
 .get-started-button:hover {
     background-color: #1e8a50;
+}
+
+/* New Section below Hero */
+.home-info-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.home-info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.info-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* New Meal Plans Section */
+.meal-plans-section {
+    background-color: #00a26d; /* Light Gray Background */
+    padding: 50px 0;
+  }
+  
+  .meal-plans-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .meal-plans-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .circular-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .meal-plans-text {
+    width: 50%;
+    color: white;
+  }
+  
+  .meal-plans-text h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .meal-plans-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .meal-plans-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .meal-plans-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .meal-plans-list li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #f60;
+  }
+  
+  /* Meal Plan Cards Section */
+.meal-plan-cards-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f8f8f8; /* Light gray background */
+  }
+  
+  .meal-plan-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .meal-plan-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .meal-plan-cards {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .meal-plan-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+  }
+  
+  .meal-plan-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .meal-count {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .meal-plan-details h3 {
+    font-size: 28px;
+    color: #00a26d;
+    margin: 20px 0 10px 0;
+  }
+  
+  .meal-plan-details p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .meal-plan-button {
+    background-color: #00a26d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .meal-plan-button:hover {
+    background-color: #008a57;
+  }
+  
+  .meal-plan-card:nth-child(3) .meal-plan-button {
+    background-color: #f60;
+  }
+  
+  .meal-plan-card:nth-child(3) .meal-plan-button:hover {
+    background-color: #e55500;
+  }
+  
+  /* Light Blue button for Healthy Gourmet Dinner */
+.meal-plan-card:first-child .meal-plan-button {
+    background-color: #00BFFF; /* Light blue */
+}
+
+.meal-plan-card:first-child .meal-plan-button:hover {
+    background-color: #009ACD; /* Darker blue on hover */
+}
+
+/* Ensure all images are the same size */
+.meal-plan-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }

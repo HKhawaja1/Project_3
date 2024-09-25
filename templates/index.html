@@ -121,6 +121,90 @@
       </div>
     </div>
 
+<!-- Testimonial Section -->
+<div class="testimonial-section">
+  <h2 class="testimonial-title">What Our Clients Are Saying</h2>
+  <div class="testimonial-container">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <img src="{{ url_for('static', filename='assets/Home_9.jpg') }}" alt="Client 1" class="testimonial-image">
+      <h3>Michael Scott</h3>
+      <p>The meals are exactly what I needed to balance my busy work schedule with nutritious eating. Highly recommend!</p>
+      <span class="testimonial-quote">“</span>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <img src="{{ url_for('static', filename='assets/Home_10.jpg') }}" alt="Client 2" class="testimonial-image">
+      <h3>Sarah Lee</h3>
+      <p>The convenience of fresh, healthy meals delivered to my doorstep has been life-changing. I love the variety too!</p>
+      <span class="testimonial-quote">“</span>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <img src="{{ url_for('static', filename='assets/Home_11.jpg') }}" alt="Client 3" class="testimonial-image">
+      <h3>James Robinson</h3>
+      <p>The meal plans helped me stay on track with my fitness goals. The flavors are amazing, and the quality is top-notch.</p>
+      <span class="testimonial-quote">“</span>
+    </div>
+  </div>
+</div>
+
+<!-- Full-Width Image Section -->
+<div class="full-width-image-section">
+  <img src="{{ url_for('static', filename='assets/Home_12.jpg') }}" alt="Full Width Image" class="full-width-image">
+  <div class="image-text-overlay">
+    <h2>Start Eating Healthy Today</h2>
+    <button class="image-button">HOW IT WORKS</button>
+  </div>
+</div>
+
+     <!-- FAQ Section -->
+     <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question">Can I choose my meals?</button>
+        <div class="faq-answer">
+          <p>Yes, you can choose from a variety of meal options tailored to your dietary preferences.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">When will I receive my order?</button>
+        <div class="faq-answer">
+          <p>Your order will arrive within 2-3 business days from the time of placing your order.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I skip a delivery?</button>
+        <div class="faq-answer">
+          <p>Yes, you can skip a delivery by updating your preferences in the account settings at least 24 hours before the scheduled delivery date.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I add extras to my delivery?</button>
+        <div class="faq-answer">
+          <p>You can add snacks, beverages, or other extras to your delivery at checkout.</p>
+        </div>
+      </div>
+    </div>
+
+<!-- Newsletter Subscription Section -->
+<div class="newsletter-section">
+  <img src="{{ url_for('static', filename='assets/Home_13.jpg') }}" alt="Newsletter Background Image" class="newsletter-image">
+  <div class="newsletter-overlay">
+    <h2>Subscribe To Our Newsletter</h2>
+    <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </div>
+</div>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

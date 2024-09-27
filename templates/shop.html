@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Title</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
@@ -21,41 +21,18 @@
     </div>
 
     <!-- Hero Image Section -->
-    <div class="hero home-hero">
+    <div class="hero shop-hero">
       <img src="{{ url_for('static', filename='assets/Shop_1.jpg') }}" alt="Hero Image" class="hero-image">
       <div class="hero-text">
-        <h1>Nutritious Meals Delivered With Ease</h1>
-        <p>Enjoy wholesome, flavorful dishes every day, without any hassle in the kitchen.</p>
-        <button class="hero-button">HOW IT WORKS</button>
+        <h1>Our Shop</h1>
+        <p>Browse through our delicious meal options and find your next favorite dish.</p>
       </div>
     </div>
 
-    <!-- New Section below Hero -->
-    <div class="home-info-section">
-      <div class="home-info">
-        <div class="info-item">
-          <img src="{{ url_for('static', filename='assets/Home_2.jpg') }}" alt="Icon 1" class="info-image">
-          <h3>Select your preferred dishes</h3>
-          <p>Explore a variety of meals tailored to your taste. Convenient and easy to order.</p>
-        </div>
-        <div class="info-item">
-          <img src="{{ url_for('static', filename='assets/Home_3.jpg') }}" alt="Icon 2" class="info-image">
-          <h3>Customize to your needs</h3>
-          <p>Adjust ingredients and portion sizes to match your lifestyle and preferences.</p>
-        </div>
-        <div class="info-item">
-          <img src="{{ url_for('static', filename='assets/Home_4.jpg') }}" alt="Icon 3" class="info-image">
-          <h3>Affordable, fresh meals</h3>
-          <p>Enjoy delicious meals at an affordable price without compromising on freshness.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Meal Plans Section -->
     <div class="meal-plan-cards-section">
-      <h2 class="meal-plan-title">Personalized Meal Plans for Every Palate</h2>
-      <p class="meal-plan-subtitle">Whether you’re seeking wholesome, nutritious options or comfort classics, our meal plans are designed to meet your tastes and bring ease to your dining experience.</p>
-
+      <h2 class="meal-plan-title">Curated Meal Plans for Your Lifestyle</h2>
+      <p class="meal-plan-subtitle">Explore our carefully selected meal plans designed to provide the perfect balance of nutrition, flavor, and convenience.</p>
+      
       <div class="meal-plan-cards">
         <!-- Card 1 -->
         <div class="meal-plan-card">
@@ -80,7 +57,7 @@
             <button class="meal-plan-button">CHOOSE PLAN</button>
           </div>
         </div>
-
+    
         <!-- Card 3 -->
         <div class="meal-plan-card">
           <img src="{{ url_for('static', filename='assets/Home_8.jpg') }}" alt="Meal Plan 3" class="meal-plan-image">
@@ -93,117 +70,70 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>    
 
     <!-- Explore Our Menu Section -->
     <section class="menu-section">
       <h2 class="menu-title">Discover Our Gourmet Selections</h2>
       <p class="menu-subtitle">Indulge in our diverse range of meals, crafted to suit every taste — from vibrant veggie dishes to succulent meats and fresh seafood delights.</p>
 
+      <!-- Veggie Selections -->
       <h3>Veggie Selections</h3>
       <div class="menu-cards">
-        <!-- Card 1: Veggie Delight -->
+        {% for meal in meals %}
         <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Veggie_1.jpg') }}" alt="Veggie Delight" class="menu-image">
-          <h3>Veggie Delight</h3>
-          <p class="meal-price">$8.99 USD</p>
-          <p>Fresh vegetables cooked to perfection with a touch of spice.</p>
+          <img src="{{ url_for('static', filename=meal['image']) }}" alt="{{ meal['name'] }}" class="menu-image">
+          <h3>{{ meal['name'] }}</h3>
+          <p class="meal-price">{{ meal['price'] }} USD</p>
+          <p>{{ meal['description'] }}</p>
           <button class="add-to-cart">ADD TO CART</button>
         </div>
-
-        <!-- Card 2: Quinoa Bowl -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Veggie_2.jpg') }}" alt="Quinoa Bowl" class="menu-image">
-          <h3>Quinoa Bowl</h3>
-          <p class="meal-price">$10.99 USD</p>
-          <p>A nourishing bowl of quinoa, avocado, and fresh vegetables.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
-
-        <!-- Card 3: Grilled Veggie Salad -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Veggie_3.jpg') }}" alt="Grilled Veggie Salad" class="menu-image">
-          <h3>Grilled Veggie Salad</h3>
-          <p class="meal-price">$9.99 USD</p>
-          <p>Grilled seasonal vegetables served with a light dressing.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
+        {% endfor %}
       </div>
 
+      <!-- Meat Selections -->
       <h3>Meat Selections</h3>
       <div class="menu-cards">
-        <!-- Card 1: Grilled Chicken -->
+        {% for meal in meat_meals %}
         <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Meat_1.jpg') }}" alt="Grilled Chicken" class="menu-image">
-          <h3>Grilled Chicken</h3>
-          <p class="meal-price">$12.99 USD</p>
-          <p>Juicy grilled chicken served with a side of roasted vegetables.</p>
+          <img src="{{ url_for('static', filename=meal['image']) }}" alt="{{ meal['name'] }}" class="menu-image">
+          <h3>{{ meal['name'] }}</h3>
+          <p class="meal-price">{{ meal['price'] }} USD</p>
+          <p>{{ meal['description'] }}</p>
           <button class="add-to-cart">ADD TO CART</button>
         </div>
-
-        <!-- Card 2: Steak Peppercorn -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Meat_2.jpg') }}" alt="Steak Peppercorn" class="menu-image">
-          <h3>Steak Peppercorn</h3>
-          <p class="meal-price">$15.99 USD</p>
-          <p>Tender steak in a peppercorn sauce served with mashed potatoes.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
-
-        <!-- Card 3: BBQ Ribs -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Meat_3.jpg') }}" alt="BBQ Ribs" class="menu-image">
-          <h3>BBQ Ribs</h3>
-          <p class="meal-price">$14.99 USD</p>
-          <p>Slow-cooked BBQ ribs smothered in a tangy sauce, served with fries.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
+        {% endfor %}
       </div>
 
+      <!-- Pescatarian Selections -->
       <h3>Pescatarian Selections</h3>
       <div class="menu-cards">
-        <!-- Card 1: Grilled Salmon -->
+        {% for meal in pescatarian_meals %}
         <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Pescatarian_1.jpg') }}" alt="Grilled Salmon" class="menu-image">
-          <h3>Grilled Salmon</h3>
-          <p class="meal-price">$16.99 USD</p>
-          <p>Grilled salmon served with a side of asparagus and lemon butter sauce.</p>
+          <img src="{{ url_for('static', filename=meal['image']) }}" alt="{{ meal['name'] }}" class="menu-image">
+          <h3>{{ meal['name'] }}</h3>
+          <p class="meal-price">{{ meal['price'] }} USD</p>
+          <p>{{ meal['description'] }}</p>
           <button class="add-to-cart">ADD TO CART</button>
         </div>
-
-        <!-- Card 2: Shrimp Scampi -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Pescatarian_2.jpg') }}" alt="Shrimp Scampi" class="menu-image">
-          <h3>Shrimp Scampi</h3>
-          <p class="meal-price">$14.99 USD</p>
-          <p>Sautéed shrimp in a garlic butter sauce served over linguine.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
-
-        <!-- Card 3: Tuna Poke Bowl -->
-        <div class="menu-card">
-          <img src="{{ url_for('static', filename='assets/Pescatarian_3.jpg') }}" alt="Tuna Poke Bowl" class="menu-image">
-          <h3>Tuna Poke Bowl</h3>
-          <p class="meal-price">$13.99 USD</p>
-          <p>Fresh ahi tuna with avocado, seaweed, and sesame served over rice.</p>
-          <button class="add-to-cart">ADD TO CART</button>
-        </div>
+        {% endfor %}
       </div>
-      
-    
+
     </section>
- <!-- Newsletter Subscription Section -->
- <div class="newsletter-section">
-  <img src="{{ url_for('static', filename='assets/Home_13.jpg') }}" alt="Newsletter Background Image" class="newsletter-image">
-  <div class="newsletter-overlay">
-    <h2>Subscribe To Our Newsletter</h2>
-    <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email address" required>
-      <button type="submit">SUBSCRIBE</button>
-    </form>
-  </div>
-</div>
+
+    <!-- Newsletter Subscription Section -->
+    <div class="newsletter-section">
+      <img src="{{ url_for('static', filename='assets/Home_13.jpg') }}" alt="Newsletter Background Image" class="newsletter-image">
+      <div class="newsletter-overlay">
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
+        <form class="newsletter-form" method="POST" action="/subscribe">
+          <input type="email" name="email" placeholder="Enter your email address" required>
+          <button type="submit">SUBSCRIBE</button>
+      </form>      
+      </div>
+    </div>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

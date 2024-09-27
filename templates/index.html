@@ -198,10 +198,10 @@
   <div class="newsletter-overlay">
     <h2>Subscribe To Our Newsletter</h2>
     <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email address" required>
+    <form class="newsletter-form" method="POST" action="/subscribe">
+      <input type="email" name="email" placeholder="Enter your email address" required>
       <button type="submit">SUBSCRIBE</button>
-    </form>
+  </form>  
   </div>
 </div>
 

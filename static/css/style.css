@@ -728,17 +728,22 @@ button:hover {
 }
 
 /* Newsletter Section */
+/* Ensure the newsletter image has no margin or padding at the bottom */
 .newsletter-section {
   position: relative;
   text-align: center;
   color: white;
-  margin-top: 50px;
+  margin-top: 0;
+  padding: 0;
 }
 
 .newsletter-image {
+  display: block;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 400px; /* Restore the original size or set a maximum height */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  margin: 0;
+  padding: 0;
 }
 
 .newsletter-overlay {
@@ -1190,5 +1195,56 @@ button:hover {
   font-weight: bold;
   margin-bottom: 8px; /* Reduce bottom margin */
   font-size: 16px; /* Reduce font size */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.footer-links a:hover {
+  color: #f60;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-right {
+  text-align: center;
 }
 

@@ -1248,3 +1248,9 @@ button:hover {
   text-align: center;
 }
 
+/* Navigation Logo */
+.nav-logo {
+  width: 150px;
+  height: auto;
+  margin-right: 20px; /* Adds some space between the logo and the navigation links */
+}

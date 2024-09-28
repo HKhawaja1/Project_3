@@ -10,6 +10,8 @@
     <!-- Flexbox Navigation Banner -->
     <div class="nav-banner">
       <nav class="nav-container">
+        <!-- Logo beside navigation -->
+        <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="nav-logo">
         <ul class="nav-list">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
@@ -26,7 +28,7 @@
       <div class="hero-text">
         <h1>Nutritious Meals Delivered With Ease</h1>
         <p>Enjoy wholesome, flavorful dishes every day, without any hassle in the kitchen.</p>
-        <button class="hero-button">HOW IT WORKS</button>
+        <button class="hero-button" onclick="location.href='/about'">HOW IT WORKS</button>
       </div>
     </div>
 
@@ -91,7 +93,7 @@
             <h3>$91.08 USD</h3>
             <p>Healthy Gourmet Dinner</p>
             <p>Experience a balance of flavor and nutrition with our expertly crafted meals.</p>
-            <button class="meal-plan-button">CHOOSE PLAN</button>
+            <button class="meal-plan-button" onclick="location.href='/shop'">CHOOSE PLAN</button>
           </div>
         </div>
         
@@ -103,7 +105,7 @@
             <h3>$72.68 USD</h3>
             <p>Everyday Wellness</p>
             <p>Perfect for maintaining a balanced diet while enjoying wholesome flavors.</p>
-            <button class="meal-plan-button">CHOOSE PLAN</button>
+            <button class="meal-plan-button" onclick="location.href='/shop'">CHOOSE PLAN</button>
           </div>
         </div>
 
@@ -115,53 +117,53 @@
             <h3>$45.08 USD</h3>
             <p>Comfort Classics</p>
             <p>Savor homestyle favorites that bring comfort and joy to your meals.</p>
-            <button class="meal-plan-button">CHOOSE PLAN</button>
+            <button class="meal-plan-button" onclick="location.href='/shop'">CHOOSE PLAN</button>
           </div>
         </div>
       </div>
     </div>
 
-<!-- Testimonial Section -->
-<div class="testimonial-section">
-  <h2 class="testimonial-title">What Our Clients Are Saying</h2>
-  <div class="testimonial-container">
-    <!-- Testimonial 1 -->
-    <div class="testimonial-card">
-      <img src="{{ url_for('static', filename='assets/Home_9.jpg') }}" alt="Client 1" class="testimonial-image">
-      <h3>Michael Scott</h3>
-      <p>The meals are exactly what I needed to balance my busy work schedule with nutritious eating. Highly recommend!</p>
-      <span class="testimonial-quote">“</span>
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+      <h2 class="testimonial-title">What Our Clients Are Saying</h2>
+      <div class="testimonial-container">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <img src="{{ url_for('static', filename='assets/Home_9.jpg') }}" alt="Client 1" class="testimonial-image">
+          <h3>Michael Scott</h3>
+          <p>The meals are exactly what I needed to balance my busy work schedule with nutritious eating. Highly recommend!</p>
+          <span class="testimonial-quote">“</span>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <img src="{{ url_for('static', filename='assets/Home_10.jpg') }}" alt="Client 2" class="testimonial-image">
+          <h3>Sarah Lee</h3>
+          <p>The convenience of fresh, healthy meals delivered to my doorstep has been life-changing. I love the variety too!</p>
+          <span class="testimonial-quote">“</span>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <img src="{{ url_for('static', filename='assets/Home_11.jpg') }}" alt="Client 3" class="testimonial-image">
+          <h3>James Robinson</h3>
+          <p>The meal plans helped me stay on track with my fitness goals. The flavors are amazing, and the quality is top-notch.</p>
+          <span class="testimonial-quote">“</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Testimonial 2 -->
-    <div class="testimonial-card">
-      <img src="{{ url_for('static', filename='assets/Home_10.jpg') }}" alt="Client 2" class="testimonial-image">
-      <h3>Sarah Lee</h3>
-      <p>The convenience of fresh, healthy meals delivered to my doorstep has been life-changing. I love the variety too!</p>
-      <span class="testimonial-quote">“</span>
+    <!-- Full-Width Image Section -->
+    <div class="full-width-image-section">
+      <img src="{{ url_for('static', filename='assets/Home_12.jpg') }}" alt="Full Width Image" class="full-width-image">
+      <div class="image-text-overlay">
+        <h2>Start Eating Healthy Today</h2>
+        <button class="image-button" onclick="location.href='/about'">HOW IT WORKS</button>
+      </div>
     </div>
 
-    <!-- Testimonial 3 -->
-    <div class="testimonial-card">
-      <img src="{{ url_for('static', filename='assets/Home_11.jpg') }}" alt="Client 3" class="testimonial-image">
-      <h3>James Robinson</h3>
-      <p>The meal plans helped me stay on track with my fitness goals. The flavors are amazing, and the quality is top-notch.</p>
-      <span class="testimonial-quote">“</span>
-    </div>
-  </div>
-</div>
-
-<!-- Full-Width Image Section -->
-<div class="full-width-image-section">
-  <img src="{{ url_for('static', filename='assets/Home_12.jpg') }}" alt="Full Width Image" class="full-width-image">
-  <div class="image-text-overlay">
-    <h2>Start Eating Healthy Today</h2>
-    <button class="image-button">HOW IT WORKS</button>
-  </div>
-</div>
-
-     <!-- FAQ Section -->
-     <div class="faq-section">
+    <!-- FAQ Section -->
+    <div class="faq-section">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
         <button class="faq-question">Can I choose my meals?</button>
@@ -192,39 +194,39 @@
       </div>
     </div>
 
-<!-- Newsletter Subscription Section -->
-<div class="newsletter-section">
-  <img src="{{ url_for('static', filename='assets/Home_13.jpg') }}" alt="Newsletter Background Image" class="newsletter-image">
-  <div class="newsletter-overlay">
-    <h2>Subscribe To Our Newsletter</h2>
-    <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
-    <form class="newsletter-form" method="POST" action="/subscribe">
-      <input type="email" name="email" placeholder="Enter your email address" required>
-      <button type="submit">SUBSCRIBE</button>
-  </form>  
-  </div>
-</div>
+    <!-- Newsletter Subscription Section -->
+    <div class="newsletter-section">
+      <img src="{{ url_for('static', filename='assets/Home_13.jpg') }}" alt="Newsletter Background Image" class="newsletter-image">
+      <div class="newsletter-overlay">
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>Get the latest updates, meal plans, and special offers delivered straight to your inbox.</p>
+        <form class="newsletter-form" method="POST" action="/subscribe">
+          <input type="email" name="email" placeholder="Enter your email address" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>  
+      </div>
+    </div>
 
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="footer-logo">
-    </div>
-    <div class="footer-center">
-      <ul class="footer-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/shop">Shop</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-right">
-      <p class="footer-text">© 2024 FlavorsToYou | All Rights Reserved</p>
-    </div>
-  </div>
-</footer>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <p class="footer-text">© 2024 FlavorsToYou | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>

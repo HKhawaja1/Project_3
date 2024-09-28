@@ -1217,6 +1217,7 @@ button:hover {
 .footer-logo {
   width: 150px;
   height: auto;
+  cursor: pointer; /* Indicate the logo is clickable */
 }
 
 .footer-links {

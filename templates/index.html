@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
+    <!-- Scroll target at the top of the page -->
+    <div id="top"></div>
+
     <!-- Flexbox Navigation Banner -->
     <div class="nav-banner">
       <nav class="nav-container">
-        <!-- Logo beside navigation -->
+        <!-- Top logo (non-clickable) -->
         <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="nav-logo">
         <ul class="nav-list">
           <li><a href="/">Home</a></li>
@@ -211,7 +214,8 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
-          <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="footer-logo">
+          <!-- Footer logo (clickable for smooth scroll) -->
+          <img id="footer-logo" src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" class="footer-logo">
         </div>
         <div class="footer-center">
           <ul class="footer-links">

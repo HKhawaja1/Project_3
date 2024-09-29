@@ -406,7 +406,7 @@ button:hover {
 }
 
 .get-started-button {
-  background-color: #27AE60;
+  background-color: #27ae60;
   color: white;
 }
 
@@ -518,7 +518,7 @@ button:hover {
 }
 
 .meal-plans-list li::before {
-  content: '✔️';
+  content: "✔️";
   margin-right: 10px;
   color: #f60;
 }
@@ -604,11 +604,11 @@ button:hover {
 
 /* Light Blue button for Healthy Gourmet Dinner */
 .meal-plan-card:first-child .meal-plan-button {
-  background-color: #00BFFF;
+  background-color: #00bfff;
 }
 
 .meal-plan-card:first-child .meal-plan-button:hover {
-  background-color: #009ACD;
+  background-color: #009acd;
 }
 
 .meal-plan-card:nth-child(3) .meal-plan-button {
@@ -1123,11 +1123,11 @@ button:hover {
 }
 
 .meal-plan-card:first-child .meal-plan-button {
-  background-color: #00BFFF;
+  background-color: #00bfff;
 }
 
 .meal-plan-card:first-child .meal-plan-button:hover {
-  background-color: #009ACD;
+  background-color: #009acd;
 }
 
 .meal-plan-card:nth-child(3) .meal-plan-button {
@@ -1264,7 +1264,9 @@ li {
   font-family: "Courier New", "Lucida Console";
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Georgia, "Times New Roman";
 }
 

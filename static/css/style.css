@@ -372,6 +372,10 @@ body {
   line-height: 1.6;
 }
 
+p.blog-date {
+  color: #00a26d;
+}
+
 /* Divider Line */
 .divider {
   margin-top: 30px;
@@ -1253,5 +1257,197 @@ button:hover {
 .nav-logo {
   width: 150px;
   height: auto;
-  margin-right: 20px; /* Adds some space between the logo and the navigation links */
+  margin-right: 30px; /* Adds some space between the logo and the navigation links */
+}
+
+li {
+  font-family: "Courier New", "Lucida Console";
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman";
+}
+
+p {
+  font-family: Arial;
+}
+
+p.meal-card-heading {
+  color: black;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman";
+}
+
+/* Style for blog post headings links */
+.blog-text h2 a {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+.blog-text h2 a:hover {
+  color: #f60; /* Add a hover color if desired */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and devices with a width between 768px and 1024px */
+@media only screen and (max-width: 1024px) {
+  .nav-list {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .info-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-item h3 {
+    font-size: 20px;
+  }
+
+  .info-item p {
+    font-size: 14px;
+  }
+
+  .meal-plans-text h3 {
+    font-size: 28px;
+  }
+
+  .meal-plan-card {
+    width: 45%;
+  }
+
+  .testimonial-card {
+    width: 200px;
+  }
+
+  .testimonial-title {
+    font-size: 28px;
+  }
+
+  .full-width-image-section {
+    height: 400px;
+  }
+
+  .menu-card {
+    width: 45%;
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+}
+
+/* For smartphones and devices with a width less than 768px */
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .info-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info-item h3 {
+    font-size: 18px;
+  }
+
+  .info-item p {
+    font-size: 14px;
+  }
+
+  .meal-plans-text h3 {
+    font-size: 24px;
+  }
+
+  .meal-plan-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .testimonial-title {
+    font-size: 24px;
+  }
+
+  .full-width-image-section {
+    height: 300px;
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+
+  .footer-links li {
+    margin: 10px 0;
+  }
+}
+
+/* For larger screens and desktops (default styles remain) */
+@media only screen and (min-width: 1025px) {
+  /* Your default styles remain unchanged for larger screens */
 }

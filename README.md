@@ -1,7 +1,7 @@
 # FlavorstoYou
 
 **GitHub Repository**: [Project_3](https://github.com/HKhawaja1/Project_3)  
-**Flask URL**: [FlavorstoYou Web App](https://project-3-i2dh.onrender.com)
+**Flask URL**: [FlavorstoYou Web App](https://project-3-34uf.onrender.com)
 
 ## References
 
